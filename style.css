@@ -14,9 +14,18 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 20px; /* 画像の間隔を調整 */
+    flex-wrap: wrap; /* 画面が狭いときに折り返す */
 }
 
 .responsive-image {
     width: 300px;
-    height: 300px;
+    height: auto; /* 画像の縦横比を維持 */
     object-fit: cover; /* 画像が枠にフィットするように調整 */
+    max-width: 100%; /* 画面サイズに応じて最大幅を調整 */
+}
+
+@media (max-width: 600px) {
+    .responsive-image {
+        width: 100%; /* スマホ画面では画像を100%幅に */
+    }
+}
