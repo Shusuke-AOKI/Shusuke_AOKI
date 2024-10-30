@@ -9,7 +9,7 @@ h1 {
     text-align: center;
 }
 
-.image-container {
+.image-container, .image-gallery {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,20 +17,13 @@ h1 {
     flex-wrap: wrap; /* 画面が狭いときに折り返す */
 }
 
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.image-gallery .responsive-image {
-    width: 30%;
-    margin: 5px;
+.responsive-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    object-fit: contain; /* 画像が枠にフィットするように調整 */
 }
 
 @media (max-width: 600px) {
-    .image-gallery .responsive-image {
-        width: 80%; /* スマホ画面では画像を80%幅に */
-        margin-bottom: 10px;
-    }
-
+    .responsive-image {
+        max-width: 80%; /* スマホ画面では画像を80%幅に */
