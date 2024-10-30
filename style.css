@@ -17,15 +17,20 @@ h1 {
     flex-wrap: wrap; /* 画面が狭いときに折り返す */
 }
 
-.responsive-image {
-    width: 300px;
-    height: auto; /* 画像の縦横比を維持 */
-    object-fit: cover; /* 画像が枠にフィットするように調整 */
-    max-width: 100%; /* 画面サイズに応じて最大幅を調整 */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-gallery .responsive-image {
+    width: 30%;
+    margin: 5px;
 }
 
 @media (max-width: 600px) {
-    .responsive-image {
-        width: 100%; /* スマホ画面では画像を100%幅に */
+    .image-gallery .responsive-image {
+        width: 80%; /* スマホ画面では画像を80%幅に */
+        margin-bottom: 10px;
     }
-}
+
