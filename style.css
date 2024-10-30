@@ -9,7 +9,8 @@ h1 {
     text-align: center;
 }
 
-.image-container, .image-gallery {
+.image-container,
+.image-gallery {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,3 +28,4 @@ h1 {
 @media (max-width: 600px) {
     .responsive-image {
         max-width: 80%; /* スマホ画面では画像を80%幅に */
+    
